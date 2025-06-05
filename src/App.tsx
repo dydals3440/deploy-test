@@ -1,7 +1,21 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import HomePage from './pages/HomePage';
+import BaseballPage from './pages/BaseballPage';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomePage />,
+  },
+  {
+    path: '/baseball',
+    element: <BaseballPage />,
+  },
+]);
 
 function App() {
-  return <h1>오타니 안</h1>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
